@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Profile &amp; Settings | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/profile.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="profile">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       Profile &amp; Settings
+      </h1>
+      <p>
+       Update your profile and manage your saved information.
+      </p>
+     </div>
+    </div>
+    <div class="grid cols-2">
+     <section class="card">
+      <h2>
+       Your profile
+      </h2>
+      <div class="row" style="justify-content:flex-start;margin:18px 0">
+       <img alt="Profile photo" class="photo-preview hidden" id="photo-preview"/>
+       <div class="avatar" id="photo-initials" style="width:86px;height:86px;font-size:24px">
+        G
+       </div>
+       <div>
+        <div class="field photo-upload-field">
+         <label for="photo-file">
+          Profile photo (optional)
+         </label>
+         <input accept="image/*" id="photo-file" type="file"/>
+        </div>
+        <button class="btn ghost small" id="remove-photo" style="margin-top:6px" type="button">
+         Remove photo
+        </button>
+        <small class="muted">
+         Image must be under 1 MB.
+        </small>
+       </div>
+      </div>
+      <form id="profile-form">
+       <div class="field">
+        <label for="profile-name">
+         Full name *
+        </label>
+        <input id="profile-name" required=""/>
+       </div>
+       <div class="field" style="margin-top:14px">
+        <label for="profile-email">
+         Email *
+        </label>
+        <input id="profile-email" required="" type="email"/>
+       </div>
+       <div class="field" style="margin-top:14px">
+        <label for="profile-phone">
+         Phone (optional)
+        </label>
+        <input id="profile-phone" type="tel"/>
+       </div>
+       <div class="notice hidden" id="profile-message" role="status" style="margin-top:14px">
+       </div>
+       <div class="form-actions">
+        <button type="submit">
+         Save profile
+        </button>
+       </div>
+      </form>
+     </section>
+     <section class="card">
+      <h2>
+       Data and privacy
+      </h2>
+      <p class="muted" style="font-size:13px">
+       Your information is stored locally in this browser. It is not synced to an online account or shared database.
+      </p>
+      <div class="notice warn">
+       Avoid entering sensitive medical information. Passwords are not stored by HealthTrack. Profile photos remain in this browser until you remove them or reset your saved data.
+      </div>
+      <h3 style="margin-top:22px">
+       Reset saved data
+      </h3>
+      <p class="muted" style="font-size:13px">
+       This clears your reports, profile details, tracker entries, goals, notifications, and saved BMI from this browser.
+      </p>
+      <button class="btn danger" id="reset-demo" type="button">
+       Reset all saved data
+      </button>
+     </section>
+    </div>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/profile.js">
+  </script>
+ </body>
+</html>
+

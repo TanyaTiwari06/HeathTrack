@@ -1,0 +1,9 @@
+/* Styles specific to the profile page. */
+.photo-preview {
+    width:86px;
+    height:86px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid var(--line);
+    background:var(--mint)
+}
