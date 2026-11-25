@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Daily Tracking | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/daily-tracking.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="daily-tracking">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       Daily Tracking
+      </h1>
+      <p>
+       Track hydration and steps together. Set your own goals below.
+      </p>
+     </div>
+    </div>
+    <div class="grid cols-2">
+     <section class="card">
+      <div class="row">
+       <div>
+        <div class="stat-label">
+         HYDRATION
+        </div>
+        <h2 style="margin-top:5px">
+         Water intake
+        </h2>
+       </div>
+       <div class="stat-icon">
+        ♧
+       </div>
+      </div>
+      <div class="stat-number">
+       <span id="water-today">
+        0
+       </span>
+       <small>
+        ml
+       </small>
+      </div>
+      <div class="progress">
+       <span id="water-bar">
+       </span>
+      </div>
+      <p class="sub" id="water-goal-label">
+       Set your daily goal to get started.
+      </p>
+      <form class="row" id="water-form" style="margin-top:16px">
+       <div class="field" style="flex:1">
+        <label for="water-amount">
+         Add water (ml)
+        </label>
+        <input id="water-amount" min="1" placeholder="e.g. 250" required="" step="1" type="number"/>
+       </div>
+       <button style="align-self:end" type="submit">
+        ＋ Add
+       </button>
+      </form>
+      <div aria-label="Quick add water" class="quick-add-row">
+       <button class="btn secondary small" data-amount="150" data-quick-add="water" type="button">
+        +150 ml
+       </button>
+       <button class="btn secondary small" data-amount="250" data-quick-add="water" type="button">
+        +250 ml
+       </button>
+       <button class="btn secondary small" data-amount="500" data-quick-add="water" type="button">
+        +500 ml
+       </button>
+      </div>
+      <h3 style="margin-top:22px">
+       Today's water log
+      </h3>
+      <div class="stack" id="water-history" style="margin-top:10px">
+       <div class="empty">
+        No water logged today.
+       </div>
+      </div>
+     </section>
+     <section class="card">
+      <div class="row">
+       <div>
+        <div class="stat-label">
+         MOVEMENT
+        </div>
+        <h2 style="margin-top:5px">
+         Step count
+        </h2>
+       </div>
+       <div class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon footprint-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+         <path d="M7.1 2.8c-1.7.2-2.7 2.1-2.4 4.5.3 2.1 1.5 3.5 3 3.3 1.7-.2 2.6-2.2 2.3-4.4-.3-2.2-1.4-3.6-2.9-3.4Z">
+         </path>
+         <path d="M4.7 12.2c-1.6 1-2.7 3.1-2.4 5 .3 1.8 1.7 2.8 3.3 2.5 1.7-.3 2.8-2 2.5-3.8-.3-1.8-1.8-3.2-3.4-3.7Z">
+         </path>
+         <path d="M16.9 2.8c1.7.2 2.7 2.1 2.4 4.5-.3 2.1-1.5 3.5-3 3.3-1.7-.2-2.6-2.2-2.3-4.4.3-2.2 1.4-3.6 2.9-3.4Z">
+         </path>
+         <path d="M19.3 12.2c1.6 1 2.7 3.1 2.4 5-.3 1.8-1.7 2.8-3.3 2.5-1.7-.3-2.8-2-2.5-3.8.3-1.8 1.8-3.2 3.4-3.7Z">
+         </path>
+        </svg>
+       </div>
+      </div>
+      <div class="stat-number">
+       <span id="steps-today">
+        0
+       </span>
+       <small>
+        steps
+       </small>
+      </div>
+      <div class="progress">
+       <span id="steps-bar">
+       </span>
+      </div>
+      <p class="sub" id="steps-goal-label">
+       Set your daily goal to get started.
+      </p>
+      <form class="row" id="steps-form" style="margin-top:16px">
+       <div class="field" style="flex:1">
+        <label for="steps-amount">
+         Add steps to today&rsquo;s total
+        </label>
+        <input id="steps-amount" min="1" placeholder="e.g. 1200" required="" step="1" type="number"/>
+       </div>
+       <button style="align-self:end" type="submit">
+        ＋ Add steps
+       </button>
+      </form>
+      <div aria-label="Quick add steps" class="quick-add-row">
+       <button class="btn secondary small" data-amount="500" data-quick-add="steps" type="button">
+        +500
+       </button>
+       <button class="btn secondary small" data-amount="1000" data-quick-add="steps" type="button">
+        +1,000
+       </button>
+       <button class="btn secondary small" data-amount="2000" data-quick-add="steps" type="button">
+        +2,000
+       </button>
+      </div>
+      <h3 style="margin-top:22px">
+       Today's step log
+      </h3>
+      <div class="stack" id="steps-history" style="margin-top:10px">
+       <div class="empty">
+        No steps logged today.
+       </div>
+      </div>
+     </section>
+    </div>
+    <section class="card" style="margin-top:18px">
+     <h2>
+      Set your daily goals
+     </h2>
+     <p class="muted" style="font-size:13px">
+      Choose the goals that suit you. HealthTrack will not set a goal automatically.
+     </p>
+     <form id="goal-form">
+      <div class="form-grid">
+       <div class="field">
+        <label for="water-goal">
+         Water goal (ml/day)
+        </label>
+        <input id="water-goal" inputmode="numeric" min="1" placeholder="e.g. 2000" required="" step="1" type="number"/>
+       </div>
+       <div class="field">
+        <label for="steps-goal">
+         Steps goal (steps/day)
+        </label>
+        <input id="steps-goal" inputmode="numeric" min="1" placeholder="e.g. 6000" required="" step="1" type="number"/>
+       </div>
+      </div>
+      <div class="form-actions">
+       <button type="submit">
+        Save goals
+       </button>
+      </div>
+     </form>
+     <div aria-live="polite" class="notice hidden" id="tracking-message" role="status" style="margin-top:12px">
+     </div>
+    </section>
+    <div class="notice info" style="margin-top:16px">
+     Steps are entered manually in this version; the site does not automatically count steps or connect to a wearable device. Entries are stored in this browser.
+    </div>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/daily-tracking.js">
+  </script>
+ </body>
+</html>
+

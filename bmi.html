@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   BMI Calculator | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/bmi.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="bmi">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       BMI Calculator
+      </h1>
+      <p>
+       Calculate Body Mass Index using height and weight.
+      </p>
+     </div>
+    </div>
+    <div class="grid cols-2">
+     <section class="card">
+      <h2>
+       Enter your measurements
+      </h2>
+      <p class="muted" style="font-size:13px">
+       Use centimetres and kilograms.
+      </p>
+      <form id="bmi-form">
+       <div class="field" style="margin-top:18px">
+        <label for="bmi-height">
+         Height (cm)
+        </label>
+        <input id="bmi-height" max="260" min="50" placeholder="e.g. 165" required="" step="0.1" type="number"/>
+       </div>
+       <div class="field" style="margin-top:16px">
+        <label for="bmi-weight">
+         Weight (kg)
+        </label>
+        <input id="bmi-weight" max="500" min="10" placeholder="e.g. 60" required="" step="0.1" type="number"/>
+       </div>
+       <div class="notice hidden" id="bmi-message" role="status" style="margin-top:14px">
+       </div>
+       <div class="form-actions">
+        <button type="submit">
+         Calculate BMI &rarr;
+        </button>
+       </div>
+      </form>
+     </section>
+     <section class="card">
+      <h2>
+       Your result
+      </h2>
+      <p class="muted" style="font-size:13px">
+       Your latest calculation is saved in this browser.
+      </p>
+      <div id="bmi-result" style="margin-top:18px">
+       <div class="empty">
+        Enter your height and weight, then select Calculate BMI.
+       </div>
+      </div>
+     </section>
+    </div>
+    <section class="card" style="margin-top:18px">
+     <h2>
+      Understanding adult BMI
+     </h2>
+     <p class="muted" style="font-size:13px">
+      For adults, standard BMI categories are commonly described as below 18.5, 18.5&ndash;24.9, 25.0&ndash;29.9, and 30 or above. These are screening categories, not diagnoses.
+     </p>
+     <div class="notice warn">
+      BMI does not directly measure body fat or overall health. These adult categories are not suitable for children and teenagers, and interpretation can differ during pregnancy, for athletes, and in some other circumstances. Consider professional advice for individual interpretation.
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/bmi.js">
+  </script>
+ </body>
+</html>
+

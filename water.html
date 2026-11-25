@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Water Tracker | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/water.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="water">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       Water Tracker
+      </h1>
+      <p>
+       Log your water intake and keep track of your daily hydration goal.
+      </p>
+     </div>
+    </div>
+    <div class="grid cols-2">
+     <section class="card tracker-primary">
+      <div class="row">
+       <div>
+        <div class="stat-label">
+         TODAY
+        </div>
+        <h2 style="margin-top:5px">
+         Water Tracker
+        </h2>
+       </div>
+       <span class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+         <path d="M12 2.5S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.5 12 2.5Z">
+         </path>
+        </svg>
+       </span>
+      </div>
+      <div class="stat-number">
+       <span id="water-today">
+        0
+       </span>
+       <small>
+        ml
+       </small>
+      </div>
+      <div aria-label="Daily water goal progress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress" role="progressbar">
+       <span id="water-bar">
+       </span>
+      </div>
+      <p class="tracker-progress-text" id="water-progress-text">
+       0% of your daily goal
+      </p>
+      <p class="sub" id="water-goal-label">
+       Set your daily goal to get started.
+      </p>
+      <form class="tracker-entry-form" id="water-form" style="margin-top:16px">
+       <div class="field">
+        <label for="water-amount">
+         Add water (ml)
+        </label>
+        <input id="water-amount" min="1" placeholder="e.g. 250" required="" step="1" type="number"/>
+       </div>
+       <button type="submit">
+        ＋ Add water
+       </button>
+      </form>
+      <div aria-label="Quick add water" class="quick-add-row">
+       <button class="btn secondary small" data-amount="150" data-quick-add="water" type="button">
+        +150 ml
+       </button>
+       <button class="btn secondary small" data-amount="250" data-quick-add="water" type="button">
+        +250 ml
+       </button>
+       <button class="btn secondary small" data-amount="500" data-quick-add="water" type="button">
+        +500 ml
+       </button>
+      </div>
+      <h3 style="margin-top:22px">
+       Today's log
+      </h3>
+      <div class="stack" id="water-history" style="margin-top:10px">
+       <div class="empty">
+        Nothing logged today yet.
+       </div>
+      </div>
+     </section>
+     <section class="card">
+      <h2>
+       Daily goal
+      </h2>
+      <p class="muted">
+       Choose a target that suits you. You can change it at any time.
+      </p>
+      <form class="stack" id="water-goal-form">
+       <div class="field">
+        <label for="water-goal">
+         Water goal (ml/day)
+        </label>
+        <input id="water-goal" min="1" placeholder="e.g. 2000" required="" step="1" type="number"/>
+       </div>
+       <button type="submit">
+        Save goal
+       </button>
+      </form>
+      <div aria-live="polite" class="notice hidden" id="water-message" role="status" style="margin-top:12px">
+      </div>
+      <div class="tracker-tip">
+       Your entries are saved in this browser. They are not synced across devices.
+      </div>
+     </section>
+    </div>
+    <section class="card" style="margin-top:18px">
+     <h2>
+      Recent daily history
+     </h2>
+     <p class="muted">
+      Past totals appear here as you log entries on different dates.
+     </p>
+     <div class="stack" id="water-history-days">
+      <div class="empty">
+       History will appear after you log entries.
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/water.js">
+  </script>
+ </body>
+</html>
+

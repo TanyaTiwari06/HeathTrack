@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Step Tracker | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/steps.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="steps">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       Step Tracker
+      </h1>
+      <p>
+       Record your daily steps and track progress toward your movement goal.
+      </p>
+     </div>
+    </div>
+    <div class="grid cols-2">
+     <section class="card tracker-primary">
+      <div class="row">
+       <div>
+        <div class="stat-label">
+         TODAY
+        </div>
+        <h2 style="margin-top:5px">
+         Step Tracker
+        </h2>
+       </div>
+       <span class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon footprint-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+         <path d="M7.1 2.8c-1.7.2-2.7 2.1-2.4 4.5.3 2.1 1.5 3.5 3 3.3 1.7-.2 2.6-2.2 2.3-4.4-.3-2.2-1.4-3.6-2.9-3.4Z">
+         </path>
+         <path d="M4.7 12.2c-1.6 1-2.7 3.1-2.4 5 .3 1.8 1.7 2.8 3.3 2.5 1.7-.3 2.8-2 2.5-3.8-.3-1.8-1.8-3.2-3.4-3.7Z">
+         </path>
+         <path d="M16.9 2.8c1.7.2 2.7 2.1 2.4 4.5-.3 2.1-1.5 3.5-3 3.3-1.7-.2-2.6-2.2-2.3-4.4.3-2.2 1.4-3.6 2.9-3.4Z">
+         </path>
+         <path d="M19.3 12.2c1.6 1 2.7 3.1 2.4 5-.3 1.8-1.7 2.8-3.3 2.5-1.7-.3-2.8-2-2.5-3.8.3-1.8 1.8-3.2 3.4-3.7Z">
+         </path>
+        </svg>
+       </span>
+      </div>
+      <div class="stat-number">
+       <span id="steps-today">
+        0
+       </span>
+       <small>
+        steps
+       </small>
+      </div>
+      <div aria-label="Daily steps goal progress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress" role="progressbar">
+       <span id="steps-bar">
+       </span>
+      </div>
+      <p class="tracker-progress-text" id="steps-progress-text">
+       0% of your daily goal
+      </p>
+      <p class="sub" id="steps-goal-label">
+       Set your daily goal to get started.
+      </p>
+      <form class="tracker-entry-form" id="steps-form" style="margin-top:16px">
+       <div class="field" style="flex:1">
+        <label for="steps-amount">
+         Add steps to today&rsquo;s total
+        </label>
+        <input id="steps-amount" min="1" placeholder="e.g. 4200" required="" step="1" type="number"/>
+       </div>
+       <button type="submit">
+        ＋ Add steps
+       </button>
+      </form>
+      <div aria-label="Quick add steps" class="quick-add-row">
+       <button class="btn secondary small" data-amount="500" data-quick-add="steps" type="button">
+        +500
+       </button>
+       <button class="btn secondary small" data-amount="1000" data-quick-add="steps" type="button">
+        +1,000
+       </button>
+       <button class="btn secondary small" data-amount="2000" data-quick-add="steps" type="button">
+        +2,000
+       </button>
+      </div>
+      <h3 style="margin-top:22px">
+       Today's log
+      </h3>
+      <div class="stack" id="steps-history" style="margin-top:10px">
+       <div class="empty">
+        Nothing logged today yet.
+       </div>
+      </div>
+     </section>
+     <section class="card">
+      <h2>
+       Daily goal
+      </h2>
+      <p class="muted">
+       Choose a target that suits you. You can change it at any time.
+      </p>
+      <form class="stack" id="steps-goal-form">
+       <div class="field">
+        <label for="steps-goal">
+         Steps goal (steps/day)
+        </label>
+        <input id="steps-goal" min="1" placeholder="e.g. 6000" required="" step="1" type="number"/>
+       </div>
+       <button type="submit">
+        Save goal
+       </button>
+      </form>
+      <div aria-live="polite" class="notice hidden" id="steps-message" role="status" style="margin-top:12px">
+      </div>
+      <div class="tracker-tip">
+       Your entries are saved in this browser. They are not synced across devices.
+      </div>
+     </section>
+    </div>
+    <section class="card" style="margin-top:18px">
+     <h2>
+      Recent daily history
+     </h2>
+     <p class="muted">
+      Past totals appear here as you log entries on different dates.
+     </p>
+     <div class="stack" id="steps-history-days">
+      <div class="empty">
+       History will appear after you log entries.
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/steps.js">
+  </script>
+ </body>
+</html>
+
