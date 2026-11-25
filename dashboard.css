@@ -1,0 +1,31 @@
+/* Styles specific to the dashboard page. */
+.bmi-cta {
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin-top:5px;
+    padding:9px 12px!important;
+    background:var(--deep)!important;
+    color:white!important;
+    text-decoration:none!important;
+    border-radius:10px
+}.bmi-cta svg {
+    width:16px;
+    height:16px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round
+}.view-all-link {
+    display:inline-flex;
+    gap:7px;
+    align-items:center;
+    color:var(--teal);
+    font-size:12px;
+    font-weight:700;
+    text-decoration:none
+}.view-all-link:hover {
+    text-decoration:none;
+    color:var(--deep)
+}
