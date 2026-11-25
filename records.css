@@ -1,0 +1,16 @@
+/* Styles specific to the records page. */
+.chart-wrap {
+    position:relative;
+    min-height:250px
+}.chart-wrap svg {
+    width:100%;
+    height:auto;
+    display:block;
+    overflow:visible
+}.chart-point {
+    cursor:pointer
+}.tooltip {
+    font-size:12px;
+    color:var(--slate);
+    margin-top:8px
+}

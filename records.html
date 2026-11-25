@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   My Health | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/records.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="records">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       My Health
+      </h1>
+      <p>
+       Manage saved reports and explore trends based only on your saved values.
+      </p>
+     </div>
+    </div>
+    <section class="card">
+     <div class="row wrap">
+      <h2>
+       My Reports
+      </h2>
+      <span class="muted" style="font-size:12px">
+       Search and filter your saved reports
+      </span>
+     </div>
+     <div class="form-grid" style="margin:16px 0">
+      <div class="field">
+       <label for="report-search">
+        Search reports
+       </label>
+       <input id="report-search" placeholder="Search by report name or lab"/>
+      </div>
+      <div class="field">
+       <label for="report-type-filter">
+        Filter by type
+       </label>
+       <select id="report-type-filter">
+        <option value="">
+         All report types
+        </option>
+       </select>
+      </div>
+     </div>
+     <div class="stack" id="report-list">
+      <div class="empty">
+       Loading reports&hellip;
+      </div>
+     </div>
+    </section>
+    <section class="card" id="trend-section" style="margin-top:18px">
+     <div class="row wrap">
+      <div>
+       <h2>
+        Health trends
+       </h2>
+       <p class="muted" style="font-size:13px">
+        Choose a parameter to see how its recorded value changes across reports.
+       </p>
+      </div>
+      <div class="field" style="min-width:180px">
+       <label for="trend-parameter">
+        Parameter
+       </label>
+       <select id="trend-parameter">
+        <option>
+         Choose a parameter
+        </option>
+       </select>
+      </div>
+     </div>
+     <div class="chart-wrap" id="trend-chart" style="margin-top:18px">
+      <div class="empty">
+       Your trend chart will appear after you save real report values.
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/records.js">
+  </script>
+ </body>
+</html>
+
