@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Log in | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/login.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="login">
+  <div class="auth-wrap">
+   <aside class="auth-side">
+    <a class="brand" href="index.html" style="color:white">
+     <span aria-hidden="true" class="brand-mark">
+      <svg focusable="false" viewBox="0 0 40 40">
+       <path d="M3 21h8l4-10 6 19 5-12 3 3h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7">
+       </path>
+      </svg>
+     </span>
+     <span class="brand-word">
+      Health
+      <span>
+       Track
+      </span>
+     </span>
+    </a>
+    <div class="auth-brand-visual">
+     <div aria-hidden="true" class="auth-heartbeat-mark">
+      <span class="brand-mark brand-mark-large">
+       <svg viewBox="0 0 40 40">
+        <path d="M3 21h8l4-10 6 19 5-12 3 3h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7">
+        </path>
+       </svg>
+      </span>
+     </div>
+     <div class="eyebrow">
+      Your health, simplified
+     </div>
+     <h1>
+      More clarity.
+      <br/>
+      One healthier routine.
+     </h1>
+     <p>
+      Keep your reports organised, review common test values, and build simple daily tracking habits in one calm workspace.
+     </p>
+     <div class="auth-visual-pills">
+      <span>
+       Report summaries
+      </span>
+      <span>
+       Health trends
+      </span>
+      <span>
+       Daily habits
+      </span>
+     </div>
+    </div>
+   </aside>
+   <main class="auth-main">
+    <a class="auth-back-link" href="index.html">
+     &larr; Back to homepage
+    </a>
+    <form class="auth-form" id="login-form">
+     <h1 style="margin-top:0">
+      Log in
+     </h1>
+     <p class="muted">
+      Log in with the email and password you used when creating your profile.
+     </p>
+     <div class="field">
+      <label for="login-email">
+       Email address
+      </label>
+      <input id="login-email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="login-password">
+       Password
+      </label>
+      <input autocomplete="current-password" id="login-password" placeholder="Enter your password" required="" type="password"/>
+     </div>
+     <div class="notice info" style="margin-bottom:16px">
+      Your account is stored only in this browser. This is a front-end demonstration, not secure online authentication.
+     </div>
+     <div class="notice hidden" id="auth-message" role="status">
+     </div>
+     <button style="width:100%;margin-top:12px" type="submit">
+      Log in &rarr;
+     </button>
+     <p class="muted" style="margin-top:18px;text-align:center">
+      New here?
+      <a href="signup.html">
+       Create your profile
+      </a>
+     </p>
+    </form>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/login.js">
+  </script>
+ </body>
+</html>
+
