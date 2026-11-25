@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Dashboard | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/dashboard.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="dashboard">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1 id="greeting">
+       Your health overview
+      </h1>
+      <p>
+       Quick view of your reports and today's activity.
+      </p>
+     </div>
+    </div>
+    <div class="grid cols-4">
+     <section class="card stat-card">
+      <div class="stat-top">
+       <span class="stat-label">
+        Reports saved
+       </span>
+       <span class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+         </path>
+         <path d="M14 2v6h6M8 13h8M8 17h8">
+         </path>
+        </svg>
+       </span>
+      </div>
+      <div class="stat-number" id="report-count">
+       0
+      </div>
+      <p class="sub">
+       Saved in this browser
+      </p>
+     </section>
+     <section class="card stat-card">
+      <div class="stat-top">
+       <span class="stat-label">
+        Water today
+       </span>
+       <span class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+         <path d="M12 2.5S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.5 12 2.5Z">
+         </path>
+        </svg>
+       </span>
+      </div>
+      <div class="stat-number">
+       <span id="water-total">
+        0
+       </span>
+       <small>
+        ml
+       </small>
+      </div>
+      <div class="progress">
+       <span id="water-progress">
+       </span>
+      </div>
+      <p class="sub" id="water-goal-text">
+       Set your daily goal
+      </p>
+     </section>
+     <section class="card stat-card">
+      <div class="stat-top">
+       <span class="stat-label">
+        Steps today
+       </span>
+       <span class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon footprint-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+         <path d="M7.1 2.8c-1.7.2-2.7 2.1-2.4 4.5.3 2.1 1.5 3.5 3 3.3 1.7-.2 2.6-2.2 2.3-4.4-.3-2.2-1.4-3.6-2.9-3.4Z">
+         </path>
+         <path d="M4.7 12.2c-1.6 1-2.7 3.1-2.4 5 .3 1.8 1.7 2.8 3.3 2.5 1.7-.3 2.8-2 2.5-3.8-.3-1.8-1.8-3.2-3.4-3.7Z">
+         </path>
+         <path d="M16.9 2.8c1.7.2 2.7 2.1 2.4 4.5-.3 2.1-1.5 3.5-3 3.3-1.7-.2-2.6-2.2-2.3-4.4.3-2.2 1.4-3.6 2.9-3.4Z">
+         </path>
+         <path d="M19.3 12.2c1.6 1 2.7 3.1 2.4 5-.3 1.8-1.7 2.8-3.3 2.5-1.7-.3-2.8-2-2.5-3.8.3-1.8 1.8-3.2 3.4-3.7Z">
+         </path>
+        </svg>
+       </span>
+      </div>
+      <div class="stat-number" id="step-total">
+       0
+      </div>
+      <div class="progress">
+       <span id="step-progress">
+       </span>
+      </div>
+      <p class="sub" id="steps-goal-text">
+       Set your daily goal
+      </p>
+     </section>
+     <section class="card stat-card">
+      <div class="stat-top">
+       <span class="stat-label">
+        Latest BMI
+       </span>
+       <span class="stat-icon">
+        <svg aria-hidden="true" class="ui-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+         <rect height="20" rx="2" width="14" x="5" y="2">
+         </rect>
+         <path d="M8 6h8M8 10h2m4 0h2M8 14h2m4 0h2M8 18h2">
+         </path>
+        </svg>
+       </span>
+      </div>
+      <div class="stat-number" id="dashboard-bmi">
+       &mdash;
+      </div>
+      <p class="sub">
+       <a class="btn bmi-cta" href="bmi.html">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+         <rect height="18" rx="2" width="14" x="5" y="3">
+         </rect>
+         <path d="M8 7h8M8 11h2m4 0h2M8 15h2m4 0h2">
+         </path>
+        </svg>
+        Calculate BMI
+       </a>
+      </p>
+     </section>
+    </div>
+    <div style="height:18px">
+    </div>
+    <div class="grid cols-2">
+     <section class="card">
+      <div class="row">
+       <h2>
+        Quick Actions
+       </h2>
+      </div>
+      <div class="stack" style="margin-top:14px">
+       <a class="quick-link" href="add-report.html">
+        <div>
+         <strong>
+          Add a medical report
+         </strong>
+         <small>
+          Upload and review report values
+         </small>
+        </div>
+        <span>
+         &rarr;
+        </span>
+       </a>
+       <a class="quick-link" href="records.html">
+        <div>
+         <strong>
+          Open My Health
+         </strong>
+         <small>
+          Saved reports and real-data trends
+         </small>
+        </div>
+        <span>
+         &rarr;
+        </span>
+       </a>
+       <a class="quick-link" href="water.html">
+        <div>
+         <strong>
+          Water Tracker
+         </strong>
+         <small>
+          Log water and review your daily goal
+         </small>
+        </div>
+        <span>
+         &rarr;
+        </span>
+       </a>
+       <a class="quick-link" href="steps.html">
+        <div>
+         <strong>
+          Step Tracker
+         </strong>
+         <small>
+          Update your daily step total
+         </small>
+        </div>
+        <span>
+         &rarr;
+        </span>
+       </a>
+       <a class="quick-link" href="bmi.html">
+        <div>
+         <strong>
+          BMI Calculator
+         </strong>
+         <small>
+          Calculate a BMI result
+         </small>
+        </div>
+        <span>
+         &rarr;
+        </span>
+       </a>
+      </div>
+     </section>
+     <section class="card">
+      <div class="row">
+       <h2>
+        Recent reports
+       </h2>
+       <a class="view-all-link" href="records.html">
+        View All
+        <span aria-hidden="true">
+         &rarr;
+        </span>
+       </a>
+      </div>
+      <div id="recent-reports" style="margin-top:14px">
+       <div class="empty">
+        No reports saved yet. Add your first report to get started.
+       </div>
+      </div>
+     </section>
+    </div>
+    <div style="height:18px">
+    </div>
+    <div class="notice info">
+     HealthTrack provides informational comparisons, not diagnoses. Reference ranges can vary by laboratory and individual circumstances; consult a healthcare professional for medical decisions.
+    </div>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/dashboard.js">
+  </script>
+ </body>
+</html>
+
