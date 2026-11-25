@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Create profile | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/signup.css"/><link rel="stylesheet" href="css/common.css"/>
+ </head>
+ <body data-page="signup">
+  <div class="auth-wrap">
+   <aside class="auth-side">
+    <a class="brand" href="index.html" style="color:white">
+     <span aria-hidden="true" class="brand-mark">
+      <svg focusable="false" viewBox="0 0 40 40">
+       <path d="M3 21h8l4-10 6 19 5-12 3 3h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7">
+       </path>
+      </svg>
+     </span>
+     <span class="brand-word">
+      Health
+      <span>
+       Track
+      </span>
+     </span>
+    </a>
+    <div class="auth-brand-visual">
+     <div aria-hidden="true" class="auth-heartbeat-mark">
+      <span class="brand-mark brand-mark-large">
+       <svg viewBox="0 0 40 40">
+        <path d="M3 21h8l4-10 6 19 5-12 3 3h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7">
+        </path>
+       </svg>
+      </span>
+     </div>
+     <div class="eyebrow">
+      Start simple
+     </div>
+     <h1>
+      A little more clarity, all in one place.
+     </h1>
+     <p>
+      Create an account in this browser to get started.
+     </p>
+     <div class="auth-visual-pills">
+      <span>
+       Report summaries
+      </span>
+      <span>
+       Health trends
+      </span>
+      <span>
+       Daily habits
+      </span>
+     </div>
+    </div>
+   </aside>
+   <main class="auth-main">
+    <a class="auth-back-link" href="index.html">
+     &larr; Back to homepage
+    </a>
+    <form class="auth-form" id="signup-form">
+     <h1 style="margin-top:0">
+      Create your profile
+     </h1>
+     <p class="muted">
+      Fields marked * are required.
+     </p>
+     <div class="field">
+      <label for="signup-name">
+       Full name *
+      </label>
+      <input id="signup-name" placeholder="Your name" required=""/>
+     </div>
+     <div class="field">
+      <label for="signup-email">
+       Email address *
+      </label>
+      <input id="signup-email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="signup-phone">
+       Phone (optional)
+      </label>
+      <input id="signup-phone" placeholder="Phone number" type="tel"/>
+     </div>
+     <div class="field">
+      <label for="signup-password">
+       Password *
+      </label>
+      <input id="signup-password" minlength="8" placeholder="At least 8 characters" required="" type="password"/>
+     </div>
+     <div class="field">
+      <label for="signup-confirm">
+       Confirm password *
+      </label>
+      <input id="signup-confirm" placeholder="Re-enter password" required="" type="password"/>
+     </div>
+     <label class="check-row">
+      <input required="" type="checkbox"/>
+      I understand this is a browser-only demo and not secure medical storage.
+     </label>
+     <div class="notice hidden" id="auth-message" role="status" style="margin-top:14px">
+     </div>
+     <button style="width:100%;margin-top:16px" type="submit">
+      Create profile &rarr;
+     </button>
+     <p class="muted" style="margin-top:18px;text-align:center">
+      Already have a profile?
+      <a href="login.html">
+       Log in
+      </a>
+     </p>
+    </form>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/signup.js">
+  </script>
+ </body>
+</html>
+
