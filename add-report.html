@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Add New Report | HealthTrack
+  </title>
+  <link rel="stylesheet" href="css/add-report.css"/><link rel="stylesheet" href="css/common.css"/>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js">
+  </script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js">
+  </script>
+ </head>
+ <body data-page="add-report">
+  <header class="topbar" id="topbar">
+  </header>
+  <div class="app-layout">
+   <aside class="sidebar" id="sidebar">
+   </aside>
+   <main class="main">
+    <div class="page-heading">
+     <div>
+      <h1>
+       Add a medical report
+      </h1>
+      <p>
+       Upload a PDF or image for text recognition, or enter values manually.
+      </p>
+     </div>
+    </div>
+    <div class="card">
+     <form id="report-form">
+      <div class="form-grid">
+       <div class="field">
+        <label for="report-name">
+         Report name *
+        </label>
+        <input id="report-name" placeholder="e.g. Blood test report" required=""/>
+       </div>
+       <div class="field">
+        <label for="report-date">
+         Report date *
+        </label>
+        <input id="report-date" required="" type="date"/>
+       </div>
+       <div class="field">
+        <label for="report-type">
+         Report type
+        </label>
+        <select id="report-type">
+         <option>
+          General
+         </option>
+         <option>
+          Blood Test
+         </option>
+         <option>
+          Lipid Profile
+         </option>
+         <option>
+          Vitamin Test
+         </option>
+         <option>
+          Other
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="lab-name">
+         Laboratory / hospital (optional)
+        </label>
+        <input id="lab-name" placeholder="Name printed on report"/>
+       </div>
+      </div>
+      <div style="height:18px">
+      </div>
+      <div class="field">
+       <div class="file-upload-box">
+        <label class="file-upload-button" for="reportFile">
+         <span>
+          &uarr;
+         </span>
+         Browse Files
+        </label>
+        <span id="fileName">
+         No file chosen
+        </span>
+        <input accept=".pdf,.png,.jpg,.jpeg" id="reportFile" type="file"/>
+       </div>
+       <div class="notice" id="drop-zone" style="margin-top:10px;text-align:center;padding:22px">
+        Drag and drop a PDF or image here, or choose a file above.
+        <br/>
+        <strong id="selected-file-name">
+         No file selected
+        </strong>
+       </div>
+       <div class="notice hidden" id="upload-message" role="status" style="margin-top:12px">
+       </div>
+       <div class="notice warn" style="margin-top:14px">
+        File reading may occasionally misinterpret values. Please verify extracted results against your original report.
+       </div>
+       <div class="row wrap" style="margin:24px 0 10px">
+        <h2 style="margin:0">
+         Test parameters
+        </h2>
+        <button class="btn secondary small" id="add-parameter" type="button">
+         ＋ Add parameter
+        </button>
+       </div>
+       <p class="sub" style="font-size:13px">
+        Choose a parameter or enter a custom one. Copy the result, unit, and lower/upper reference limits from the report. Do not guess missing ranges.
+       </p>
+       <div id="parameter-list">
+       </div>
+       <div class="notice hidden" id="report-message" role="status" style="margin-top:12px">
+       </div>
+       <div class="form-actions">
+        <button type="submit">
+         Save &amp; view summary &rarr;
+        </button>
+        <a class="btn secondary" href="dashboard.html">
+         Cancel
+        </a>
+       </div>
+      </div>
+     </form>
+    </div>
+    <p class="report-disclaimer">
+     For demonstration purposes only. HealthTrack does not provide medical diagnoses. Please use sample reports when testing.
+    </p>
+   </main>
+  </div>
+  <script src="js/common.js"></script><script src="js/add-report.js">
+  </script>
+ </body>
+</html>
+
