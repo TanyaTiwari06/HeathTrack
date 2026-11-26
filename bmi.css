@@ -1,0 +1,29 @@
+/* Styles specific to the bmi page. */
+.bmi-result {
+    background:linear-gradient(135deg,#E9F7F3,#F7FBFA);
+    border:1px solid #CFE9E2;
+    border-radius:18px;
+    padding:22px;
+    text-align:center
+}.bmi-value {
+    font:700 44px Poppins,sans-serif;
+    color:var(--deep)
+}.bmi-cta {
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin-top:5px;
+    padding:9px 12px!important;
+    background:var(--deep)!important;
+    color:white!important;
+    text-decoration:none!important;
+    border-radius:10px
+}.bmi-cta svg {
+    width:16px;
+    height:16px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round
+}
